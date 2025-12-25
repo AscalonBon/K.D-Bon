@@ -1,0 +1,109 @@
+/* style.css */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap");
+
+:root{
+    --dark: #0F2854;
+    --white: #ffffff;
+    --blue: #9CC6DB;
+    --yellow: #FCF6D9;
+    --orange: #CF4B00;
+    --beige: #DDBA7D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat';
+}
+
+body{
+    overflow-x: hidden;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+/*CLASS SECTION*/
+.contact{
+    margin: 2rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    background-color: transparent;
+    text-align: justify;
+}
+
+.contact-container{
+    display: flex;
+    align-items: center;
+}
+
+.contact-left{
+    margin: 5rem 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.8rem;
+}
+
+.contact-left-title h2{
+    font-weight: 800;
+    color: var(--dark);
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.contact-left-title hr{
+    border: none;
+    width: 16rem;
+    height: 0.3rem;
+    background-color: var(--orange);
+    margin-bottom: 2rem;
+}
+
+.contact-left textarea{
+    height: 140px;
+    padding-top: 15px;
+}
+
+.contact-inputs{
+      width: 24rem;
+    height: 4rem;
+    padding-left: 25px;
+    font-weight: 500;
+    color: var(--dark);
+    border: 2px solid var(--dark); /* Add colored outline */
+    transition: all 0.3s ease; /* Smooth transition for focus effects */
+}
+
+.contact-inputs::placeholder{
+    display: flex;
+    align-items: center;
+    padding: 5rem 3rem;
+    font-size: 16px;
+    color: var(--blue);
+    gap: 10px;
+    border: none;
+}
+
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-size: 16px;
+    color: var(--white);
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-left button:hover{
+    background-color: var(--orange);
+}
