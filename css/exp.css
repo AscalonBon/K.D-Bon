@@ -1,0 +1,147 @@
+/* experience.css */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap");
+
+:root{
+    --dark: #0F2854;
+    --white: #ffffff;
+    --blue: #9CC6DB;
+    --yellow: #FCF6D9;
+    --orange: #CF4B00;
+    --beige: #DDBA7D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat';
+}
+
+body{
+    overflow-x: hidden;
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+.experience-container{
+    margin: 4rem 8rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 6rem;
+}
+
+.experience-left{
+    flex: 1;
+}
+
+.experience-title h2{
+    font-weight: 800;
+    color: var(--dark);
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.experience-title hr{
+    border: none;
+    width: 16rem;
+    height: 0.3rem;
+    background-color: var(--orange);
+    margin-bottom: 3rem;
+}
+
+.timeline{
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before{
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--blue);
+}
+
+.timeline-item{
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-left: 2rem;
+}
+
+.timeline-item::before{
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--orange);
+    border: 3px solid var(--white);
+    box-shadow: 0 0 0 3px var(--orange);
+}
+
+.timeline-header{
+    margin-bottom: 1rem;
+}
+
+.timeline-header h3{
+    font-size: 1.4rem;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.company{
+    display: inline-block;
+    background: rgba(207, 75, 0, 0.1);
+    color: var(--orange);
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+}
+
+.date{
+    color: var(--blue);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.timeline-content ul{
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.timeline-content li{
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+.timeline-content li::before{
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.experience-right{
+    margin-top: 100px;
+    border-radius: 16%;
+    object-fit: hidden;
+}
+
+.experience-right img{
+    position: relative;
+    max-width: 450px;
+    object-fit: cover;
+    border-radius: 50px;
+}

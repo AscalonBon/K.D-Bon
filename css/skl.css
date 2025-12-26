@@ -1,0 +1,117 @@
+/* skills.css */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap");
+
+:root{
+    --dark: #0F2854;
+    --white: #ffffff;
+    --blue: #9CC6DB;
+    --yellow: #FCF6D9;
+    --orange: #CF4B00;
+    --beige: #DDBA7D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat';
+}
+
+body{
+    overflow-x: hidden;
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+.skills-container{
+    margin: 4rem 8rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 6rem;
+}
+
+.skills-left{
+    flex: 1;
+}
+
+.skills-title h2{
+    font-weight: 800;
+    color: var(--dark);
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.skills-title hr{
+    border: none;
+    width: 16rem;
+    height: 0.3rem;
+    background-color: var(--orange);
+    margin-bottom: 3rem;
+}
+
+.skills-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.skill-category{
+    background: rgba(156, 198, 219, 0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 5px solid var(--orange);
+}
+
+.skill-category h3{
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-category h3 i{
+    color: var(--orange);
+}
+
+.skill-item{
+    margin-bottom: 1.2rem;
+}
+
+.skill-item span{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.skill-bar{
+    height: 10px;
+    background-color: rgba(15, 40, 84, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level{
+    height: 100%;
+    background: linear-gradient(90deg, var(--orange), #ff6b35);
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
+.skills-right{
+    margin-top: 100px;
+    border-radius: 16%;
+    object-fit: hidden;
+}
+
+.skills-right img{
+    position: relative;
+    max-width: 450px;
+    object-fit: cover;
+    border-radius: 50px;
+}

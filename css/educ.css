@@ -1,0 +1,219 @@
+/* education.css */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap");
+
+:root{
+    --dark: #0F2854;
+    --white: #ffffff;
+    --blue: #9CC6DB;
+    --yellow: #FCF6D9;
+    --orange: #CF4B00;
+    --beige: #DDBA7D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat';
+}
+
+body{
+    overflow-x: hidden;
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+.education-container{
+    margin: 4rem 8rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 6rem;
+}
+
+.education-left{
+    flex: 1;
+}
+
+.education-title h2{
+    font-weight: 800;
+    color: var(--dark);
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.education-title hr{
+    border: none;
+    width: 16rem;
+    height: 0.3rem;
+    background-color: var(--orange);
+    margin-bottom: 3rem;
+}
+
+.education-content{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.education-card{
+    background: rgba(156, 198, 219, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid var(--orange);
+}
+
+.education-header{
+    margin-bottom: 1.5rem;
+}
+
+.education-header h3{
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.institution{
+    display: inline-block;
+    font-weight: 600;
+    color: var(--orange);
+    margin-right: 1rem;
+}
+
+.date{
+    color: var(--blue);
+    font-weight: 500;
+}
+
+.education-details p{
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.achievements{
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(15, 40, 84, 0.1);
+}
+
+.achievements h4{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.achievements h4 i{
+    color: var(--orange);
+}
+
+.achievements ul{
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.achievements li{
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+.achievements li::before{
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.certifications h3{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+}
+
+.certifications h3 i{
+    color: var(--orange);
+}
+
+.cert-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.cert-card{
+    background: rgba(221, 186, 125, 0.1);
+    padding: 1.2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(221, 186, 125, 0.3);
+}
+
+.cert-card h4{
+    font-size: 1rem;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.org{
+    display: block;
+    font-size: 0.9rem;
+    color: var(--orange);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.year{
+    font-size: 0.8rem;
+    color: var(--blue);
+    font-weight: 500;
+}
+
+.coursework h3{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+}
+
+.coursework h3 i{
+    color: var(--orange);
+}
+
+.course-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.course-tags span{
+    background: rgba(207, 75, 0, 0.1);
+    color: var(--dark);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(207, 75, 0, 0.2);
+}
+
+.education-right{
+    margin-top: 100px;
+    border-radius: 16%;
+    object-fit: hidden;
+}
+
+.education-right img{
+    position: relative;
+    max-width: 450px;
+    object-fit: cover;
+    border-radius: 50px;
+}
