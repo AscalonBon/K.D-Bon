@@ -160,9 +160,6 @@ body{
     font-size: 0.95rem;
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 .skills-container {
     animation: fadeIn 0.8s ease-out;

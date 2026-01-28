@@ -332,10 +332,6 @@ span{
     }
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 .home-content h1 {
     animation: slideUpFadeIn 1s ease-out 0.3s both;
     opacity: 0;
