@@ -69,6 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
             updateNavigation();
         });
     });
+
+    // Game
+    
     
     // Initialize
     updateNavigation();

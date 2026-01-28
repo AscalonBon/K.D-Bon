@@ -332,3 +332,323 @@ span{
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.home-content h1 {
+    animation: slideUpFadeIn 1s ease-out 0.3s both;
+    opacity: 0;
+}
+
+.home-content h3 {
+    animation: slideUpFadeIn 1s ease-out 0.6s both;
+    opacity: 0;
+}
+
+.home-content p {
+    animation: slideUpFadeIn 1s ease-out 0.9s both;
+    opacity: 0;
+}
+
+.social-icon {
+    animation: slideUpFadeIn 1s ease-out 1.2s both;
+    opacity: 0;
+}
+
+/* Image floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) scale(1.02);
+    }
+}
+
+/* Slide up with fade animation */
+@keyframes slideUpFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade in with scale animation */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Enhanced typing cursor animation */
+.typing-text span::after {
+    animation: cursorBlink 0.8s infinite, cursorPulse 2s infinite;
+}
+
+@keyframes cursorBlink {
+    0%, 100% {
+        border-left: 3px solid var(--orange);
+    }
+    50% {
+        border-left: 3px solid transparent;
+    }
+}
+
+@keyframes cursorPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Social icons hover enhancement */
+.social-icon a {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: bounceIn 0.6s ease-out backwards;
+}
+
+.social-icon a:nth-child(1) { animation-delay: 1.4s; }
+.social-icon a:nth-child(2) { animation-delay: 1.5s; }
+.social-icon a:nth-child(3) { animation-delay: 1.6s; }
+.social-icon a:nth-child(4) { animation-delay: 1.7s; }
+.social-icon a:nth-child(5) { animation-delay: 1.8s; } 
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(100px);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1.05);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Enhanced project section animations */
+.projects-title h1 {
+    animation: fadeInDown 1s ease-out 0.2s both;
+    opacity: 0;
+}
+
+.projects-title .subtitle {
+    animation: fadeInUp 1s ease-out 0.5s both;
+    opacity: 0;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Project item entrance animation */
+.project-item.active .project-media {
+    animation: slideInLeft 0.8s ease-out 0.3s both;
+    opacity: 0;
+}
+
+.project-item.active .project-content {
+    animation: slideInRight 0.8s ease-out 0.5s both;
+    opacity: 0;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Staggered animation for project features */
+.project-features li {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInListItem 0.5s ease-out forwards;
+}
+
+.project-features li:nth-child(1) { animation-delay: 0.7s; }
+.project-features li:nth-child(2) { animation-delay: 0.8s; }
+.project-features li:nth-child(3) { animation-delay: 0.9s; }
+.project-features li:nth-child(4) { animation-delay: 1s; }
+
+@keyframes slideInListItem {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Tag animations */
+.tag {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: tagPopIn 0.4s ease-out forwards;
+}
+
+.tag:nth-child(1) { animation-delay: 0.6s; }
+.tag:nth-child(2) { animation-delay: 0.7s; }
+.tag:nth-child(3) { animation-delay: 0.8s; }
+
+@keyframes tagPopIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Project link hover animation */
+.project-link {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.project-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--orange);
+    transition: width 0.3s ease;
+}
+
+.project-link:hover::after {
+    width: 100%;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* Add a subtle pulse animation to the active nav dot */
+.nav-dot.active {
+    animation: dotPulse 2s infinite;
+}
+
+@keyframes dotPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(207, 75, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(207, 75, 0, 0);
+    }
+}
+
+/* Responsive adjustments for animations */
+@media (max-width: 768px) {
+    .home-content h1,
+    .home-content h3,
+    .home-content p,
+    .social-icon {
+        animation: fadeInUp 0.8s ease-out forwards !important;
+    }
+    
+    .home-content h1 { animation-delay: 0.3s; }
+    .home-content h3 { animation-delay: 0.5s; }
+    .home-content p { animation-delay: 0.7s; }
+    .social-icon { animation-delay: 0.9s; }
+    
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+/* Add this for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+}

@@ -145,3 +145,239 @@ body{
     object-fit: cover;
     border-radius: 50px;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Page load animation */
+.experience-container {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Title animation */
+.experience-title h2 {
+    opacity: 0;
+    animation: slideInLeft 0.8s ease-out 0.2s forwards;
+}
+
+.experience-title hr {
+    opacity: 0;
+    animation: expandWidth 0.8s ease-out 0.4s forwards;
+    transform-origin: left;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes expandWidth {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 16rem;
+        opacity: 1;
+    }
+}
+
+/* Timeline animation */
+.timeline::before {
+    animation: drawLine 1s ease-out 0.6s forwards;
+    transform-origin: top;
+    opacity: 0;
+}
+
+@keyframes drawLine {
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+/* Timeline items - SIMPLIFIED VERSION */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Timeline delays */
+.timeline-item:nth-child(1) { animation-delay: 0.8s; }
+.timeline-item:nth-child(2) { animation-delay: 1s; }
+.timeline-item:nth-child(3) { animation-delay: 1.2s; }
+.timeline-item:nth-child(4) { animation-delay: 1.4s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Timeline dot */
+.timeline-item::before {
+    opacity: 0;
+    transform: scale(0);
+    animation: popIn 0.4s ease-out forwards;
+    animation-delay: inherit; /* Inherits from parent's animation-delay */
+}
+
+@keyframes popIn {
+    70% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Company tag */
+.company {
+    opacity: 0;
+    transform: translateX(-10px);
+    animation: fadeInLeft 0.5s ease-out forwards;
+}
+
+/* Inherit delay from parent timeline item plus offset */
+.timeline-item:nth-child(1) .company { animation-delay: calc(0.8s + 0.2s); }
+.timeline-item:nth-child(2) .company { animation-delay: calc(1s + 0.2s); }
+.timeline-item:nth-child(3) .company { animation-delay: calc(1.2s + 0.2s); }
+.timeline-item:nth-child(4) .company { animation-delay: calc(1.4s + 0.2s); }
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Date */
+.date {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.timeline-item:nth-child(1) .date { animation-delay: calc(0.8s + 0.3s); }
+.timeline-item:nth-child(2) .date { animation-delay: calc(1s + 0.3s); }
+.timeline-item:nth-child(3) .date { animation-delay: calc(1.2s + 0.3s); }
+.timeline-item:nth-child(4) .date { animation-delay: calc(1.4s + 0.3s); }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Timeline content items */
+.timeline-content li {
+    opacity: 0;
+    transform: translateX(10px);
+    animation: slideInRight 0.4s ease-out forwards;
+}
+
+/* Stagger list items within each timeline item */
+.timeline-item:nth-child(1) .timeline-content li:nth-child(1) { animation-delay: calc(0.8s + 0.4s); }
+.timeline-item:nth-child(1) .timeline-content li:nth-child(2) { animation-delay: calc(0.8s + 0.5s); }
+.timeline-item:nth-child(1) .timeline-content li:nth-child(3) { animation-delay: calc(0.8s + 0.6s); }
+.timeline-item:nth-child(1) .timeline-content li:nth-child(4) { animation-delay: calc(0.8s + 0.7s); }
+
+.timeline-item:nth-child(2) .timeline-content li:nth-child(1) { animation-delay: calc(1s + 0.4s); }
+.timeline-item:nth-child(2) .timeline-content li:nth-child(2) { animation-delay: calc(1s + 0.5s); }
+
+/* Continue this pattern for other timeline items */
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Image animation */
+.experience-right {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: fadeInRight 0.8s ease-out 0.8s forwards;
+}
+
+.experience-right img {
+    animation: float 6s ease-in-out infinite 2s;
+}
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(0.5deg);
+    }
+}
+
+/* Hover effects (unchanged from before) */
+.timeline-item:hover {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-header h3 {
+    color: var(--orange);
+    transition: color 0.3s ease;
+}
+
+.company:hover {
+    background: rgba(207, 75, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.experience-right img:hover {
+    transform: scale(1.02);
+    animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Reset animations for mobile */
+    .experience-container,
+    .experience-title h2,
+    .experience-title hr,
+    .timeline::before,
+    .timeline-item,
+    .timeline-item::before,
+    .company,
+    .date,
+    .timeline-content li,
+    .experience-right {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    .experience-container {
+        animation: fadeIn 0.6s ease-out forwards !important;
+    }
+}
