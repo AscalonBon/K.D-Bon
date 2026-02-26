@@ -429,6 +429,10 @@ html {
 .cert-card:nth-child(2) { animation-delay: 2.1s; }
 .cert-card:nth-child(3) { animation-delay: 2.2s; }
 .cert-card:nth-child(4) { animation-delay: 2.3s; }
+.cert-card:nth-child(5) { animation-delay: 2.4s; }
+.cert-card:nth-child(6) { animation-delay: 2.5s; }
+.cert-card:nth-child(3) { animation-delay: 2.6s; }
+.cert-card:nth-child(4) { animation-delay: 2.7s; }
 
 @keyframes cardPopIn {
     0% {
@@ -622,6 +626,10 @@ html {
     .cert-card:nth-child(2) { animation-delay: 1.3s; }
     .cert-card:nth-child(3) { animation-delay: 1.4s; }
     .cert-card:nth-child(4) { animation-delay: 1.5s; }
+    .cert-card:nth-child(5) { animation-delay: 1.6s; }
+    .cert-card:nth-child(6) { animation-delay: 1.7s; }
+    .cert-card:nth-child(7) { animation-delay: 1.8s; }
+    .cert-card:nth-child(8) { animation-delay: 1.9s; }
     
     .course-tags span {
         animation: fadeInUp 0.3s ease-out forwards;
@@ -633,4 +641,6 @@ html {
     .course-tags span:nth-child(4) { animation-delay: 1.9s; }
     .course-tags span:nth-child(5) { animation-delay: 2s; }
     .course-tags span:nth-child(6) { animation-delay: 2.1s; }
+    .course-tags span:nth-child(7) { animation-delay: 2.2s; }
+    .course-tags span:nth-child(8) { animation-delay: 2.3s; }
 }
